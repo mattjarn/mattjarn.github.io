@@ -1,0 +1,68 @@
+.form-style-3{
+	max-width: 30vw;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	float: left;
+	min-width: 150px;
+}
+.form-style-3 label{
+	display:block;
+	margin-bottom: 1.4vh;
+}
+.form-style-3 label > span{
+	float: left;
+	width: 10vw;
+	color: #33ac88;
+	font-weight: bold;
+	font-size: 13px;
+	min-width: 105px;
+}
+.form-style-3 fieldset{
+	border-radius: 2vw;
+	-webkit-border-radius: 1vw;
+	margin: 5vh 0vw 2vw 2vw;
+	padding: 1vw;
+	background: #000;
+}
+.form-style-3 textarea{
+	width:25vw;
+	height:10vh;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+	border-radius: 1vw;
+	-webkit-border-radius: 0.2vw;
+	border: 1px solid #33ac88;
+	outline: none;
+	color: #222;
+	padding: 5px 8px 5px 8px;
+	background: #666;
+	width:100%;
+	float: left;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: #33ac88;
+	border: 1px solid #33ac88;
+	padding: 5px 15px 5px 15px;
+	margin-left: 1vw;
+	color: #000;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+	float: left;
+	width: 80%;
+}
+.form-style-3 .required{
+	color:#ffac88;
+	font-weight:normal;
+}

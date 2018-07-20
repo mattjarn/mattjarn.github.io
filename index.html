@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Table V04</title>
+	<title>EmeraldRNG</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/rayquaza.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="util.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="form.css">
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 <!--===============================================================================================-->
 
 </head>
 <body>
 
-	<div id="table">
+	<div id="ivs">
+		<h2 id="hpIV"></h2>
+		<h2 id="atkIV"></h2>
+		<h2 id="defIV"></h2>
+		<h2 id="spatkIV"></h2>
+		<h2 id="spdefIV"></h2>
+		<h2 id="spdIV"></h2>
 	</div>
 	<div class="form-style-3">
-		<form>
+		<form onsubmit="return false;">
 			<fieldset>
+				<label for="fieldMethod"><span>Method <span class="required">*<select name="fieldMethod" id="method" class="select-field">
+				<option value="1">Method1(Stationary)</option><option value="2">Method2(Wild)</option><option value="3">Breeding</option></select>
 				<label for="fieldPokemon"><span>Pokemon <span class="required">*<select name="fieldPokemon" id="pkmn" class="select-field">
 				<option value="__None">---
 				</option><option value="1">Abomasnow</option><option value="2">Abomasnow (Mega)</option><option value="3">Abra</option><option value="4">Absol</option><option value="5">Absol (Mega)</option><option value="6">Accelgor</option><option value="7">Aegislash (Blade)</option><option value="8">Aegislash (Shield)</option><option value="9">Aerodactyl</option><option value="10">Aerodactyl (Mega)</option><option value="11">Aggron</option><option value="12">Aggron (Mega)</option><option value="13">Aipom</option><option value="14">Alakazam (Gen 3-5)</option><option value="15">Alakazam</option><option value="16">Alakazam (Mega, Gen 6)</option><option value="17">Alakazam (Mega)</option><option value="18">Alomomola</option><option value="19">Altaria</option><option value="20">Altaria (Mega)</option><option value="21">Amaura</option><option value="22">Ambipom</option><option value="23">Amoonguss</option><option value="24">Ampharos (Gen 3-5)</option><option value="25">Ampharos</option><option value="26">Ampharos (Mega)</option><option value="27">Anorith</option><option value="28">Araquanid</option><option value="29">Arbok (Gen 3-6)</option><option value="30">Arbok</option><option value="31">Arcanine</option><option value="32">Arceus</option><option value="33">Archen</option><option value="34">Archeops</option><option value="35">Ariados (Gen 3-6)</option><option value="36">Ariados</option><option value="37">Armaldo</option><option value="38">Aromatisse</option><option value="39">Aron</option><option value="40">Articuno</option><option value="41">Audino</option><option value="42">Audino (Mega)</option><option value="43">Aurorus</option><option value="44">Avalugg</option><option value="45">Axew</option><option value="46">Azelf</option><option value="47">Azumarill (Gen 3-5)</option><option value="48">Azumarill</option><option value="49">Azurill</option><option value="50">Bagon</option><option value="51">Baltoy</option><option value="52">Banette</option><option value="53">Banette (Mega)</option><option value="54">Barbacle</option><option value="55">Barboach</option><option value="56">Basculin</option><option value="57">Bastiodon</option><option value="58">Bayleef</option><option value="59">Beartic (Gen 5-6)</option><option value="60">Beartic</option><option value="61">Beautifly (Gen 3-5)</option><option value="62">Beautifly</option><option value="63">Beedrill (Gen 3-5)</option><option value="64">Beedrill</option><option value="65">Beedrill (Mega)</option><option value="66">Beheeyem</option><option value="67">Beldum</option><option value="68">Bellossom (Gen 3-5)</option><option value="69">Bellossom</option><option value="70">Bellsprout</option><option value="71">Bergmite</option><option value="72">Bewear</option><option value="73">Bibarel</option><option value="74">Bidoof</option><option value="75">Binacle</option><option value="76">Bisharp</option><option value="77">Blacephalon</option><option value="78">Blastoise</option><option value="79">Blastoise (Mega)</option><option value="80">Blaziken</option><option value="81">Blaziken (Mega)</option><option value="82">Blissey</option><option value="83">Blitzle</option><option value="84">Boldore</option><option value="85">Bonsly</option><option value="86">Bouffalant</option><option value="87">Bounsweet</option><option value="88">Braixen</option><option value="89">Braviary</option><option value="90">Breloom</option><option value="91">Brionne</option><option value="92">Bronzong</option><option value="93">Bronzor</option><option value="94">Bruxish</option><option value="95">Budew</option><option value="96">Buizel</option><option value="97">Bulbasaur</option><option value="98">Buneary</option><option value="99">Bunnelby</option><option value="100">Burmy</option><option value="101">Butterfree (Gen 3-5)</option><option value="102">Butterfree</option><option value="103">Buzzwole</option><option value="104">Cacnea</option><option value="105">Cacturne</option><option value="106">Camerupt</option><option value="107">Camerupt (Mega)</option><option value="108">Carbink</option><option value="109">Carnivine</option><option value="110">Carracosta</option><option value="111">Carvanha</option><option value="112">Cascoon</option><option value="113">Castform</option><option value="114">Caterpie</option><option value="115">Celebi</option><option value="116">Celesteela</option><option value="117">Chandelure</option><option value="118">Chansey</option><option value="119">Charizard</option><option value="120">Charizard (Mega X)</option><option value="121">Charizard (Mega Y)</option><option value="122">Charjabug</option><option value="123">Charmander</option><option value="124">Charmeleon</option><option value="125">Chatot</option><option value="126">Cherrim</option><option value="127">Cherubi</option><option value="128">Chesnaught</option><option value="129">Chespin</option><option value="130">Chikorita</option><option value="131">Chimchar</option><option value="132">Chimecho (Gen 3-6)</option><option value="133">Chimecho</option><option value="134">Chinchou</option><option value="135">Chingling</option><option value="136">Cinccino</option><option value="137">Clamperl</option><option value="138">Clauncher</option><option value="139">Clawitzer</option><option value="140">Claydol</option><option value="141">Clefable (Gen 3-5)</option><option value="142">Clefable</option><option value="143">Clefairy</option><option value="144">Cleffa</option><option value="145">Cloyster</option><option value="146">Cobalion</option><option value="147">Cofagrigus</option><option value="148">Combee</option><option value="149">Combusken</option><option value="150">Comfey</option><option value="151">Conkeldurr</option><option value="152">Corphish</option><option value="153">Corsola (Gen 3-6)</option><option value="154">Corsola</option><option value="155">Cosmoem</option><option value="156">Cosmog</option><option value="157">Cottonee</option><option value="158">Crabominable</option><option value="159">Crabrawler</option><option value="160">Cradily</option><option value="161">Cranidos</option><option value="162">Crawdaunt</option><option value="163">Cresselia</option><option value="164">Croagunk</option><option value="165">Crobat</option><option value="166">Croconaw</option><option value="167">Crustle (Gen 5-6)</option><option value="168">Crustle</option><option value="169">Cryogonal (Gen 5-6)</option><option value="170">Cryogonal</option><option value="171">Cubchoo</option><option value="172">Cubone</option><option value="173">Cutiefly</option><option value="174">Cyndaquil</option><option value="175">Darkrai</option><option value="176">Darmanitan</option><option value="177">Darmanitan (Zen)</option><option value="178">Dartrix</option><option value="179">Darumaka</option><option value="180">Decidueye</option><option value="181">Dedenne</option><option value="182">Deerling</option><option value="183">Deino</option><option value="184">Delcatty (Gen 3-6)</option><option value="185">Delcatty</option><option value="186">Delibird</option><option value="187">Delphox</option><option value="188">Deoxys (Attack)</option><option value="189">Deoxys (Defense)</option><option value="190">Deoxys (Normal)</option><option value="191">Deoxys (Speed)</option><option value="192">Dewgong</option><option value="193">Dewott</option><option value="194">Dewpider</option><option value="195">Dhelmise</option><option value="196">Dialga</option><option value="197">Diancie</option><option value="198">Diancie (Mega)</option><option value="199">Diggersby</option><option value="200">Diglett</option><option value="201">Diglett (Alolan)</option><option value="202">Ditto</option><option value="203">Dodrio (Gen 3-6)</option><option value="204">Dodrio</option><option value="205">Doduo</option><option value="206">Donphan</option><option value="207">Doublade</option><option value="208">Dragalge</option><option value="209">Dragonair</option><option value="210">Dragonite</option><option value="211">Drampa</option><option value="212">Drapion</option><option value="213">Dratini</option><option value="214">Drifblim</option><option value="215">Drifloon</option><option value="216">Drilbur</option><option value="217">Drowzee</option><option value="218">Druddigon</option><option value="219">Ducklett</option><option value="220">Dugtrio (Gen 3-6)</option><option value="221">Dugtrio</option><option value="222">Dugtrio (Alolan)</option><option value="223">Dunsparce</option><option value="224">Duosion</option><option value="225">Durant</option><option value="226">Dusclops</option><option value="227">Dusknoir</option><option value="228">Duskull</option><option value="229">Dustox</option><option value="230">Dwebble</option><option value="231">Eelektrik</option><option value="232">Eelektross</option><option value="233">Eevee</option><option value="234">Ekans</option><option value="235">Electabuzz</option><option value="236">Electivire</option><option value="237">Electrike</option><option value="238">Electrode (Gen 3-6)</option><option value="239">Electrode</option><option value="240">Elekid</option><option value="241">Elgyem</option><option value="242">Emboar</option><option value="243">Emolga</option><option value="244">Empoleon</option><option value="245">Entei</option><option value="246">Escavalier</option><option value="247">Espeon</option><option value="248">Espurr</option><option value="249">Excadrill</option><option value="250">Exeggcute</option><option value="251">Exeggutor (Gen 3-6)</option><option value="252">Exeggutor</option><option value="253">Exeggutor (Alolan)</option><option value="254">Exploud (Gen 3-5)</option><option value="255">Exploud</option><option value="256">Farfetch'd (Gen 3-6)</option><option value="257">Farfetch'd</option><option value="258">Fearow</option><option value="259">Feebas</option><option value="260">Fennekin</option><option value="261">Feraligatr</option><option value="262">Ferroseed</option><option value="263">Ferrothorn</option><option value="264">Finneon</option><option value="265">Flaaffy</option><option value="266">Flabébé</option><option value="267">Flareon</option><option value="268">Fletchinder</option><option value="269">Fletchling</option><option value="270">Floatzel</option><option value="271">Floette</option><option value="272">Florges</option><option value="273">Flygon</option><option value="274">Fomantis</option><option value="275">Foongus</option><option value="276">Forretress</option><option value="277">Fraxure</option><option value="278">Frillish</option><option value="279">Froakie</option><option value="280">Frogadier</option><option value="281">Froslass</option><option value="282">Furfrou</option><option value="283">Furret</option><option value="284">Gabite</option><option value="285">Gallade</option><option value="286">Gallade (Mega)</option><option value="287">Galvantula</option><option value="288">Garbodor</option><option value="289">Garchomp</option><option value="290">Garchomp (Mega)</option><option value="291">Gardevoir</option><option value="292">Gardevoir (Mega)</option><option value="293">Gastly</option><option value="294">Gastrodon</option><option value="295">Genesect</option><option value="296">Gengar</option><option value="297">Gengar (Mega)</option><option value="298">Geodude</option><option value="299">Geodude (Alolan)</option><option value="300">Gible</option><option value="301">Gigalith (Gen 4-5)</option><option value="302">Gigalith</option><option value="303">Girafarig</option><option value="304">Giratina</option><option value="305">Giratina (Origin)</option><option value="306">Glaceon</option><option value="307">Glalie</option><option value="308">Glalie (Mega)</option><option value="309">Glameow</option><option value="310">Gligar</option><option value="311">Gliscor</option><option value="312">Gloom</option><option value="313">Gogoat</option><option value="314">Golbat</option><option value="315">Goldeen</option><option value="316">Golduck</option><option value="317">Golem (Gen 3-5)</option><option value="318">Golem</option><option value="319">Golem (Alolan)</option><option value="320">Golett</option><option value="321">Golisopod</option><option value="322">Golurk</option><option value="323">Goodra</option><option value="324">Goomy</option><option value="325">Gorebyss</option><option value="326">Gothita</option><option value="327">Gothitelle</option><option value="328">Gothorita</option><option value="329">Gourgeist (Small)</option><option value="330">Gourgeist (Average)</option><option value="331">Gourgeist (Large)</option><option value="332">Gourgeist (Super)</option><option value="333">Granbull</option><option value="334">Graveler</option><option value="335">Graveler (Alolan)</option><option value="336">Greninja</option><option value="337">Greninja (Ash)</option><option value="338">Grimer</option><option value="339">Grimer (Alolan)</option><option value="340">Grotle</option><option value="341">Groudon</option><option value="342">Groudon (Primal)</option><option value="343">Grovyle</option><option value="344">Growlithe</option><option value="345">Grubbin</option><option value="346">Grumpig</option><option value="347">Gulpin</option><option value="348">Gumshoos</option><option value="349">Gurdurr</option><option value="350">Guzzlord</option><option value="351">Gyrados</option><option value="352">Gyrados (Mega)</option><option value="353">Hakamo-o</option><option value="354">Happiny</option><option value="355">Hariyama</option><option value="356">Haunter</option><option value="357">Hawlucha</option><option value="358">Haxorus</option><option value="359">Heatmor</option><option value="360">Heatran</option><option value="361">Heliolisk</option><option value="362">Helioptile</option><option value="363">Heracross</option><option value="364">Heracross (Mega)</option><option value="365">Herdier</option><option value="366">Hippopotas</option><option value="367">Hippowdon</option><option value="368">Hitmonchan</option><option value="369">Hitmonlee</option><option value="370">Hitmontop</option><option value="371">Ho-Oh</option><option value="372">Honchkrow</option><option value="373">Honedge</option><option value="374">Hoopa</option><option value="375">Hoopa (Unbound)</option><option value="376">Hoothoot</option><option value="377">Hoppip</option><option value="378">Horsea</option><option value="379">Houndoom</option><option value="380">Houndoom (Mega)</option><option value="381">Houndour</option><option value="382">Huntail</option><option value="383">Hydreigon</option><option value="384">Hypno</option><option value="385">Igglybuff</option><option value="386">Illumise (Gen 3-6)</option><option value="387">Illumise</option><option value="388">Incineroar</option><option value="389">Infernape</option><option value="390">Inkay</option><option value="391">Ivysaur</option><option value="392">Jangmo-o</option><option value="393">Jellicent</option><option value="394">Jigglypuff</option><option value="395">Jirachi</option><option value="396">Jolteon</option><option value="397">Joltik</option><option value="398">Jumpluff (Gen 3-5)</option><option value="399">Jumpluff</option><option value="400">Jynx</option><option value="401">Kabuto</option><option value="402">Kabutops</option><option value="403">Kadabra</option><option value="404">Kakuna</option><option value="405">Kangaskhan</option><option value="406">Kangaskhan (Mega)</option><option value="407">Karrablast</option><option value="408">Kartana</option><option value="409">Kecleon</option><option value="410">Keldeo</option><option value="411">Kingdra</option><option value="412">Kingler</option><option value="413">Kirlia</option><option value="414">Klang</option><option value="415">Klefki</option><option value="416">Klink</option><option value="417">Klinklang</option><option value="418">Koffing</option><option value="419">Komala</option><option value="420">Kommo-o</option><option value="421">Krabby</option><option value="422">Kricketot</option><option value="423">Kricketune</option><option value="424">Krokorok</option><option value="425">Krookodile (Gen 4-5)</option><option value="426">Krookodile</option><option value="427">Kyogre</option><option value="428">Kyogre (Primal)</option><option value="429">Kyurem</option><option value="430">Kyurem (Black)</option><option value="431">Kyurem (White)</option><option value="432">Lairon</option><option value="433">Lampent</option><option value="434">Landorus</option><option value="435">Landorus (Therian)</option><option value="436">Lanturn</option><option value="437">Lapras</option><option value="438">Larvesta</option><option value="439">Larvitar</option><option value="440">Latias</option><option value="441">Latias (Mega)</option><option value="442">Latios</option><option value="443">Latios (Mega)</option><option value="444">Leafeon</option><option value="445">Leavanny (Gen 5)</option><option value="446">Leavanny</option><option value="447">Ledian</option><option value="448">Ledyba</option><option value="449">Lickilicky</option><option value="450">Lickitung</option><option value="451">Liepard</option><option value="452">Lileep</option><option value="453">Lilligant</option><option value="454">Lillipup</option><option value="455">Linoone</option><option value="456">Litleo</option><option value="457">Litten</option><option value="458">Litwick</option><option value="459">Lombre</option><option value="460">Lopunny</option><option value="461">Lopunny (Mega)</option><option value="462">Lotad</option><option value="463">Loudred</option><option value="464">Lucario</option><option value="465">Lucario (Mega)</option><option value="466">Ludicolo</option><option value="467">Lugia</option><option value="468">Lumineon</option><option value="469">Lunala</option><option value="470">Lunatone (Gen 3-6)</option><option value="471">Lunatone</option><option value="472">Lurantis</option><option value="473">Luvdisc</option><option value="474">Luxio</option><option value="475">Luxray</option><option value="476">Lycanroc (Dusk)</option><option value="477">Lycanroc (Midday)</option><option value="478">Lycanroc (Midnight)</option><option value="479">Machamp</option><option value="480">Machoke</option><option value="481">Machop</option><option value="482">Magby</option><option value="483">Magcargo (Gen 3-6)</option><option value="484">Magcargo</option><option value="485">Magearna</option><option value="486">Magikarp</option><option value="487">Magmar</option><option value="488">Magmortar</option><option value="489">Magnemite</option><option value="490">Magneton</option><option value="491">Magnezone</option><option value="492">Makuhita</option><option value="493">Malamar</option><option value="494">Mamoswine</option><option value="495">Manaphy</option><option value="496">Mandibuzz</option><option value="497">Manectric</option><option value="498">Manectric (Mega)</option><option value="499">Mankey</option><option value="500">Mantine (Gen 3-6)</option><option value="501">Mantine</option><option value="502">Mantyke</option><option value="503">Maractus</option><option value="504">Mareanie</option><option value="505">Mareep</option><option value="506">Marill</option><option value="507">Marowak</option><option value="508">Marowak (Alolan)</option><option value="509">Marshadow</option><option value="510">Marshtomp</option><option value="511">Masquerain (Gen 3-6)</option><option value="512">Masquerain</option><option value="513">Mawile</option><option value="514">Mawile (Mega)</option><option value="515">Medicham</option><option value="516">Medicham (Mega)</option><option value="517">Meditite</option><option value="518">Meganium</option><option value="519">Meloetta</option><option value="520">Meloetta (Pirouette)</option><option value="521">Meowstic</option><option value="522">Meowth</option><option value="523">Meowth (Alolan)</option><option value="524">Mesprit</option><option value="525">Metagross</option><option value="526">Metagross (Mega)</option><option value="527">Metang</option><option value="528">Metapod</option><option value="529">Mew</option><option value="530">Mewtwo</option><option value="531">Mewtwo (Mega X)</option><option value="532">Mewtwo (Mega Y)</option><option value="533">Mienfoo</option><option value="534">Mienshao</option><option value="535">Mightyena</option><option value="536">Milotic</option><option value="537">Miltank</option><option value="538">Mime Jr.</option><option value="539">Mimikyu</option><option value="540">Minccino</option><option value="541">Minior</option><option value="542">Minior (Core)</option><option value="543">Minun</option><option value="544">Misdreavus</option><option value="545">Mismagius</option><option value="546">Moltres</option><option value="547">Monferno</option><option value="548">Morelull</option><option value="549">Mothim</option><option value="550">Mr. Mime</option><option value="551">Mudbray</option><option value="552">Mudsdale</option><option value="553">Mudkip</option><option value="554">Muk</option><option value="555">Muk (Alolan)</option><option value="556">Munchlax</option><option value="557">Munna</option><option value="558">Murkrow</option><option value="559">Musharna</option><option value="560">Naganadel</option><option value="561">Natu</option><option value="562">Necrozma</option><option value="563">Necrozma (Dusk Mane)</option><option value="564">Necrozma (Dawn Wings)</option><option value="565">Necrozma (Ultra)</option><option value="566">Nidoking (Gen 3-5)</option><option value="567">Nidoking</option><option value="568">Nidoqueen (Gen 3-5)</option><option value="569">Nidoqueen</option><option value="570">Nidoran♀</option><option value="571">Nidoran♂</option><option value="572">Nidorina</option><option value="573">Nidorino</option><option value="574">Nihilego</option><option value="575">Nincada</option><option value="576">Ninetales</option><option value="577">Ninetales (Alolan)</option><option value="578">Ninjask</option><option value="579">Noctowl (Gen 3-6)</option><option value="580">Noctowl</option><option value="581">Noibat</option><option value="582">Noivern</option><option value="583">Nosepass</option><option value="584">Numel</option><option value="585">Nuzleaf</option><option value="586">Octillery</option><option value="587">Oddish</option><option value="588">Omanyte</option><option value="589">Omastar</option><option value="590">Onix</option><option value="591">Oranguru</option><option value="592">Oricorio</option><option value="593">Oshawott</option><option value="594">Pachirisu</option><option value="595">Palkia</option><option value="596">Palossand</option><option value="597">Palpitoad</option><option value="598">Pancham</option><option value="599">Pangoro</option><option value="600">Panpour</option><option value="601">Pansage</option><option value="602">Pansear</option><option value="603">Paras</option><option value="604">Parasect</option><option value="605">Passimian</option><option value="606">Patrat</option><option value="607">Pawniard</option><option value="608">Pelipper (Gen 3-6)</option><option value="609">Pelipper</option><option value="610">Persian</option><option value="611">Persian (Alolan)</option><option value="612">Petilil</option><option value="613">Phanpy</option><option value="614">Phantump</option><option value="615">Pheromosa</option><option value="616">Phione</option><option value="617">Pichu</option><option value="618">Pidgeot (Gen 3-5)</option><option value="619">Pidgeot</option><option value="620">Pidgeot (Mega)</option><option value="621">Pidgeotto</option><option value="622">Pidgey</option><option value="623">Pidove</option><option value="624">Pignite</option><option value="625">Pikachu (Gen 3-5)</option><option value="626">Pikachu</option><option value="627">Pikipek</option><option value="628">Piloswine</option><option value="629">Pineco</option><option value="630">Pinsir</option><option value="631">Pinsir (Mega)</option><option value="632">Piplup</option><option value="633">Plusle</option><option value="634">Politoed</option><option value="635">Poliwag</option><option value="636">Poliwhirl</option><option value="637">Poliwrath (Gen 3-5)</option><option value="638">Poliwrath</option><option value="639">Ponyta</option><option value="640">Poochyena</option><option value="641">Poipole</option><option value="642">Popplio</option><option value="643">Porygon</option><option value="644">Porygon-Z</option><option value="645">Porygon2</option><option value="646">Primarina</option><option value="647">Primeape</option><option value="648">Prinplup</option><option value="649">Probopass</option><option value="650">Psyduck</option><option value="651">Pumpkaboo (Small)</option><option value="652">Pumpkaboo (Average)</option><option value="653">Pumpkaboo (Large)</option><option value="654">Pumpkaboo (Super)</option><option value="655">Pupitar</option><option value="656">Purrloin</option><option value="657">Purugly</option><option value="658">Pyroar</option><option value="659">Pyukumuku</option><option value="660">Quagsire</option><option value="661">Quilava</option><option value="662">Quilladin</option><option value="663">Qwilfish (Gen 3-6)</option><option value="664">Qwilfish</option><option value="665">Raichu (Gen 3-5)</option><option value="666">Raichu</option><option value="667">Raichu (Alolan)</option><option value="668">Raikou</option><option value="669">Ralts</option><option value="670">Rampardos</option><option value="671">Rapidash</option><option value="672">Raticate</option><option value="673">Raticate (Alolan)</option><option value="674">Rattata</option><option value="675">Rattata (Alolan)</option><option value="676">Rayquaza</option><option value="677">Rayquaza (Mega)</option><option value="678">Regice</option><option value="679">Regigigas</option><option value="680">Regirock</option><option value="681">Registeel</option><option value="682">Relicanth</option><option value="683">Remoraid</option><option value="684">Reshiram</option><option value="685">Reuniclus</option><option value="686">Rhydon</option><option value="687">Rhyhorn</option><option value="688">Rhyperior</option><option value="689">Ribombee</option><option value="690">Riolu</option><option value="691">Rockruff</option><option value="692">Roggenrola</option><option value="693">Roselia</option><option value="694">Roserade (Gen 4-5)</option><option value="695">Roserade</option><option value="696">Rotom</option><option value="697">Rotom (Other Forms)</option><option value="698">Rowlet</option><option value="699">Rufflet</option><option value="700">Sableye</option><option value="701">Sableye (Mega)</option><option value="702">Salamence</option><option value="703">Salamence (Mega)</option><option value="704">Salandit</option><option value="705">Salazzle</option><option value="706">Samurott</option><option value="707">Sandile</option><option value="708">Sandshrew</option><option value="709">Sandshrew (Alolan)</option><option value="710">Sandslash</option><option value="711">Sandslash (Alolan)</option><option value="712">Sandygast</option><option value="713">Sawk</option><option value="714">Sawsbuck</option><option value="715">Scatterbug</option><option value="716">Sceptile</option><option value="717">Sceptile (Mega)</option><option value="718">Scizor</option><option value="719">Scizor (Mega)</option><option value="720">Scolipede (Gen 5)</option><option value="721">Scolipede</option><option value="722">Scrafty</option><option value="723">Scraggy</option><option value="724">Scyther</option><option value="725">Seadra</option><option value="726">Seaking</option><option value="727">Sealeo</option><option value="728">Seedot</option><option value="729">Seel</option><option value="730">Seismitoad (Gen 5)</option><option value="731">Seismitoad</option><option value="732">Sentret</option><option value="733">Serperior</option><option value="734">Servine</option><option value="735">Seviper</option><option value="736">Sewaddle</option><option value="737">Sharpedo</option><option value="738">Sharpedo (Mega)</option><option value="739">Shaymin</option><option value="740">Shaymin (Sky)</option><option value="741">Shedinja</option><option value="742">Shelgon</option><option value="743">Shellder</option><option value="744">Shellos</option><option value="745">Shelmet</option><option value="746">Shieldon</option><option value="747">Shiftry</option><option value="748">Shiinotic</option><option value="749">Shinx</option><option value="750">Shroomish</option><option value="751">Shuckle</option><option value="752">Shuppet</option><option value="753">Sigilyph</option><option value="754">Silcoon</option><option value="755">Silvally</option><option value="756">Simipour</option><option value="757">Simisage</option><option value="758">Simisear</option><option value="759">Skarmory</option><option value="760">Skiddo</option><option value="761">Skiploom</option><option value="762">Skitty</option><option value="763">Skorupi</option><option value="764">Skrelp</option><option value="765">Skuntank</option><option value="766">Slaking</option><option value="767">Slakoth</option><option value="768">Sliggoo</option><option value="769">Slowbro</option><option value="770">Slowbro (Mega)</option><option value="771">Slowking</option><option value="772">Slowpoke</option><option value="773">Slugma</option><option value="774">Slurpuff</option><option value="775">Smeargle</option><option value="776">Smoochum</option><option value="777">Sneasel</option><option value="778">Snivy</option><option value="779">Snorlax</option><option value="780">Snorunt</option><option value="781">Snover</option><option value="782">Snubbull</option><option value="783">Solgaleo</option><option value="784">Solosis</option><option value="785">Solrock (Gen 3-6)</option><option value="786">Solrock</option><option value="787">Spearow</option><option value="788">Spewpa</option><option value="789">Spheal</option><option value="790">Spinarak</option><option value="791">Spinda</option><option value="792">Spiritomb</option><option value="793">Spoink</option><option value="794">Spritzee</option><option value="795">Squirtle</option><option value="796">Stakataka</option><option value="797">Stantler</option><option value="798">Staraptor (Gen 4-5)</option><option value="799">Staraptor</option><option value="800">Staravia</option><option value="801">Starly</option><option value="802">Starmie</option><option value="803">Staryu</option><option value="804">Steelix</option><option value="805">Steelix (Mega)</option><option value="806">Steenee</option><option value="807">Stoutland (Gen 5)</option><option value="808">Stoutland</option><option value="809">Stufful</option><option value="810">Stunfisk</option><option value="811">Stunky</option><option value="812">Sudowoodo</option><option value="813">Suicune</option><option value="814">Sunflora</option><option value="815">Sunkern</option><option value="816">Surskit</option><option value="817">Swablu</option><option value="818">Swadloon</option><option value="819">Swalot</option><option value="820">Swampert</option><option value="821">Swampert (Mega)</option><option value="822">Swanna</option><option value="823">Swellow (Gen 3-6)</option><option value="824">Swellow</option><option value="825">Swinub</option><option value="826">Swirlix</option><option value="827">Swoobat</option><option value="828">Sylveon</option><option value="829">Taillow</option><option value="830">Talonflame</option><option value="831">Tangela</option><option value="832">Tangrowth</option><option value="833">Tapu Bulu</option><option value="834">Tapu Fini</option><option value="835">Tapu Koko</option><option value="836">Tapu Lele</option><option value="837">Tauros</option><option value="838">Teddiursa</option><option value="839">Tentacool</option><option value="840">Tentacruel</option><option value="841">Tepig</option><option value="842">Terrakion</option><option value="843">Throh</option><option value="844">Thundurus</option><option value="845">Thundurus (Therian)</option><option value="846">Timburr</option><option value="847">Tirtouga</option><option value="848">Togedemaru</option><option value="849">Togekiss</option><option value="850">Togepi</option><option value="851">Togetic</option><option value="852">Torchic</option><option value="853">Torkoal</option><option value="854">Tornadus</option><option value="855">Tornadus (Therian)</option><option value="856">Torracat</option><option value="857">Torterra</option><option value="858">Totodile</option><option value="859">Toucannon</option><option value="860">Toxapex</option><option value="861">Toxicroak</option><option value="862">Tranquill</option><option value="863">Trapinch</option><option value="864">Treeko</option><option value="865">Trevenant</option><option value="866">Tropius</option><option value="867">Trubbish</option><option value="868">Trumbeak</option><option value="869">Tsareena</option><option value="870">Turtonator</option><option value="871">Turtwig</option><option value="872">Tympole</option><option value="873">Tynamo</option><option value="874">Type: Null</option><option value="875">Typhlosion</option><option value="876">Tyranitar</option><option value="877">Tyranitar (Mega)</option><option value="878">Tyrantrum</option><option value="879">Tyrogue</option><option value="880">Tyrunt</option><option value="881">Umbreon</option><option value="882">Unfezant (Gen 5)</option><option value="883">Unfezant</option><option value="884">Unown</option><option value="885">Ursaring</option><option value="886">Uxie</option><option value="887">Vanillish</option><option value="888">Vanillite</option><option value="889">Vanilluxe</option><option value="890">Vaporeon</option><option value="891">Venipede</option><option value="892">Venomoth</option><option value="893">Venonat</option><option value="894">Venusaur</option><option value="895">Venusaur (Mega)</option><option value="896">Vespiquen</option><option value="897">Vibrava</option><option value="898">Victini</option><option value="899">Victreebel (Gen 3-5)</option><option value="900">Victreebel</option><option value="901">Vigoroth</option><option value="902">Vikavolt</option><option value="903">Vileplume (Gen 3-5)</option><option value="904">Vileplume</option><option value="905">Virizion</option><option value="906">Vivillon</option><option value="907">Volbeat (Gen 3-6)</option><option value="908">Volbeat</option><option value="909">Volcanion</option><option value="910">Volcarona</option><option value="911">Voltorb</option><option value="912">Vullaby</option><option value="913">Vulpix</option><option value="914">Vulpix (Alolan)</option><option value="915">Wailmer</option><option value="916">Wailord</option><option value="917">Walrein</option><option value="918">Wartortle</option><option value="919">Watchog</option><option value="920">Weavile</option><option value="921">Weedle</option><option value="922">Weepinbell</option><option value="923">Weezing</option><option value="924">Whimsicott</option><option value="925">Whirlipede</option><option value="926">Whiscash</option><option value="927">Whismur</option><option value="928">Wigglytuff (Gen 3-5)</option><option value="929">Wigglytuff</option><option value="930">Wimpod</option><option value="931">Wingull</option><option value="932">Wishiwashi</option><option value="933">Wishiwashi (School)</option><option value="934">Wobbuffet</option><option value="935">Woobat (Gen 5-6)</option><option value="936">Woobat</option><option value="937">Wooper</option><option value="938">Wormadam (Plant)</option><option value="939">Wormadam (Sandy)</option><option value="940">Wormadam (Trash)</option><option value="941">Wurmple</option><option value="942">Wynaut</option><option value="943">Xatu</option><option value="944">Xerneas</option><option value="945">Xurkitree</option><option value="946">Yamask</option><option value="947">Yanma</option><option value="948">Yanmega</option><option value="949">Yungoos</option><option value="950">Yveltal</option><option value="951">Zangoose</option><option value="952">Zapdos</option><option value="953">Zebstrika</option><option value="954">Zekrom</option><option value="955">Zeraora</option><option value="956">Zigzagoon</option><option value="957">Zoroark</option><option value="958">Zorua</option><option value="959">Zubat</option><option value="960">Zweilous</option><option value="961">Zygarde</option><option value="962">Zygarde (10%)</option><option value="963">Zygarde (Complete)</option></select>
 				<label for="fieldNature"><span>Nature <span class="required">*<select name="fieldNature" id="nature" class="select-field">
-				<option value="__None"></option><option selected="" value="adamant">Adamant</option><option value="bashful">Bashful</option><option value="bold">Bold</option><option value="brave">Brave</option><option value="calm">Calm</option><option value="careful">Careful</option><option value="docile">Docile</option><option value="gentle">Gentle</option><option value="hardy">Hardy</option><option value="hasty">Hasty</option><option value="impish">Impish</option><option value="jolly">Jolly</option><option value="lax">Lax</option><option value="lonely">Lonely</option><option value="mild">Mild</option><option value="modest">Modest</option><option value="naive">Naive</option><option value="naughty">Naughty</option><option value="quiet">Quiet</option><option value="quirky">Quirky</option><option value="rash">Rash</option><option value="relaxed">Relaxed</option><option value="sassy">Sassy</option><option value="serious">Serious</option><option value="timid">Timid</option></select>
-				<label for="fieldLVL"><span>Level <span class="required">*</span></span><input type="text" class="input-field" name="fieldLVL" id="LVL" value="" /></label>
-				<label for="fieldHP"><span>HP <span class="required">*</span></span><input type="text" class="input-field" name="fieldHP" id="HP" value="" /></label>
-				<label for="fieldATK"><span>ATK <span class="required">*</span></span><input type="text" class="input-field" name="fieldATK" value="" /></label>
-				<label for="fieldDEF"><span>DEF <span class="required">*</span></span><input type="text" class="input-field" name="fieldDEF" value="" /></label>
-				<label for="fieldSpA"><span>SpA <span class="required">*</span></span><input type="text" class="input-field" name="fieldSpA" value="" /></label>
-				<label for="fieldSpD"><span>SpD <span class="required">*</span></span><input type="text" class="input-field" name="fieldSpD" value="" /></label>
-				<label for="fieldSpd"><span>Spd <span class="required">*</span></span><input type="text" class="input-field" name="fieldSpd" value="" /></label>
+				<option value="__None"></option><option id="Adamant" selected="" value="Adamant">Adamant</option><option id="Bashful" value="Bashful">Bashful</option>
+				<option id="Bold" value="Bold">Bold</option><option id="Brave" value="Brave">Brave</option><option id="Calm" value="Calm">Calm</option>
+				<option id="Careful" value="Careful">Careful</option><option id="Docile" value="Docile">Docile</option><option id="Gentle" value="Gentle">Gentle</option>
+				<option id="Hardy" value="Hardy">Hardy</option><option id="Hasty" value="Hasty">Hasty</option><option id="Impish" value="Impish">Impish</option>
+				<option id="Jolly" value="Jolly">Jolly</option><option id="Lax" value="Lax">Lax</option><option id="Lonely" value="Lonely">Lonely</option>
+				<option id="Mild" value="Mild">Mild</option><option id="Modest" value="Modest">Modest</option><option id="Naive" value="Naive">Naive</option>
+				<option id="Naughty" value="Naughty">Naughty</option><option id="Quiet" value="Quiet">Quiet</option><option id="Quirky" value="Quirky">Quirky</option>
+				<option id="Rash" value="Rash">Rash</option><option id="Relaxed" value="Relaxed">Relaxed</option><option id="Sassy" value="Sassy">Sassy</option>
+				<option id="Serious" value="Serious">Serious</option><option id="Timid"value="Timid">Timid</option></select>
+				<label for="fieldLVL"><span>Level <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldLVL" id="lvl" value="" /></label>
+				<label for="fieldHP"><span>HP <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldHP" id="hp" value="" /></label>
+				<label for="fieldATK"><span>ATK <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldATK" id="atk" value="" /></label>
+				<label for="fieldDEF"><span>DEF <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldDEF" id="def" value="" /></label>
+				<label for="fieldSpA"><span>SpA <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldSpA" id="spatk" value="" /></label>
+				<label for="fieldSpD"><span>SpD <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldSpD" id="spdef" value="" /></label>
+				<label for="fieldSpd"><span>Spd <span class="required">*</span></span><input type="text" autocomplete="off" class="input-field" name="fieldSpd" id="spd" value="" /></label>
 				<label><span>&nbsp;</span><input type="submit" value="Submit" onclick="calculate()"/></label>
 			</fieldset>
 		</form>
@@ -42,37 +59,6 @@
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
-				<!-- <div class="table100 ver1 m-b-110">
-					<div class="table100-head">
-						<table>
-							<thead>
-								<tr class="row100 head">
-									<th class="columnFrame">Frame</th>
-									<th class="column2">Time</th>
-									<th class="column3">Nature</th>
-									<th class="column4">Ability</th>
-									<th class="column5">HP</th>
-								</tr>
-							</thead>
-						</table>
-					</div>
-										
-					<div class="table100-body js-pscroll">
-						<table>
-							<tbody>
-								<tr class="row100 body">
-									<td class="columnFrame">Like a butterfly</td>
-									<td class="column2">Boxing</td>
-									<td class="column3">9:00 AM - 11:00 AM</td>
-									<td class="column4">Aaron Chapman</td>
-									<td class="column5">10</td>
-								</tr>
-								
-							</tbody>
-						</table>
-					</div>
-				</div> -->
-				
 				<div class="table100 ver2 m-b-110">
 					<div class="table100-head">
 						<table>
@@ -83,191 +69,19 @@
 									<th class="column3">Nature</th>
 									<th class="column4">Ability</th>
 									<th class="column5">HP</th>
+									<th class="column5">Atk</th>
+									<th class="column5">Def</th>
+									<th class="column5">SpA</th>
+									<th class="column5">SpD</th>
+									<th class="column5">Spd</th>
+
 								</tr>
 							</thead>
 						</table>
 					</div>
 
 					<div class="table100-body js-pscroll">
-						<table>
-							<tbody>
-								<tr class="row100 body">
-									<td class="cell100 column1">Like a butterfly</td>
-									<td class="cell100 column2">Boxing</td>
-									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-									<td class="cell100 column4">Aaron Chapman</td>
-									<td class="cell100 column5">10</td>
-								</tr>
 
-								<tr class="row100 body">
-									<td class="cell100 column1">Mind & Body</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Adam Stewart</td>
-									<td class="cell100 column5">15</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Crit Cardio</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">9:00 AM - 10:00 AM</td>
-									<td class="cell100 column4">Aaron Chapman</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Wheel Pose Full Posture</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">7:00 AM - 8:30 AM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">15</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Playful Dancer's Flow</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Zumba Dance</td>
-									<td class="cell100 column2">Dance</td>
-									<td class="cell100 column3">5:00 PM - 7:00 PM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">20</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Cardio Blast</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">5:00 PM - 7:00 PM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Pilates Reformer</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Supple Spine and Shoulders</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">6:30 AM - 8:00 AM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">15</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Yoga for Divas</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">20</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Virtual Cycle</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">20</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Like a butterfly</td>
-									<td class="cell100 column2">Boxing</td>
-									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-									<td class="cell100 column4">Aaron Chapman</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Mind & Body</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Adam Stewart</td>
-									<td class="cell100 column5">15</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Crit Cardio</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">9:00 AM - 10:00 AM</td>
-									<td class="cell100 column4">Aaron Chapman</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Wheel Pose Full Posture</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">7:00 AM - 8:30 AM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">15</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Playful Dancer's Flow</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Zumba Dance</td>
-									<td class="cell100 column2">Dance</td>
-									<td class="cell100 column3">5:00 PM - 7:00 PM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">20</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Cardio Blast</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">5:00 PM - 7:00 PM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Pilates Reformer</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">10</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Supple Spine and Shoulders</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">6:30 AM - 8:00 AM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">15</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Yoga for Divas</td>
-									<td class="cell100 column2">Yoga</td>
-									<td class="cell100 column3">9:00 AM - 11:00 AM</td>
-									<td class="cell100 column4">Donna Wilson</td>
-									<td class="cell100 column5">20</td>
-								</tr>
-
-								<tr class="row100 body">
-									<td class="cell100 column1">Virtual Cycle</td>
-									<td class="cell100 column2">Gym</td>
-									<td class="cell100 column3">8:00 AM - 9:00 AM</td>
-									<td class="cell100 column4">Randy Porter</td>
-									<td class="cell100 column5">20</td>
-								</tr>
-							</tbody>
-						</table>
 					</div>
 				</div>
 			</div>
@@ -276,9 +90,9 @@
 
 
 <!--===============================================================================================-->	
-	<script src="jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="perfect-scrollbar.min.js"></script>
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
 		$('.js-pscroll').each(function(){
 			var ps = new PerfectScrollbar(this);
@@ -291,11 +105,11 @@
 		
 	</script>
 <!--===============================================================================================-->
-	<script src="main.js"></script>
-	
-	<script src="table.js"></script>
-	<script src="calculateIVs.js"></script>
-	<script src="pkmn.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/calculateIVs.js"></script>
+	<script src="js/pkmn.js"></script>
+	<script src="js/method1.js"></script>
+	<script src="js/method2.js"></script>
 
 
 </body>

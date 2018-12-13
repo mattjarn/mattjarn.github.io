@@ -93,7 +93,7 @@ function getSector (symbol) {
 						name = "Healthcare";
 					if(name == "Financial" || name == "Financials")
 						name = "Financial Services";
-					console.log(name);
+					//console.log(name);
 					sectors[name]+=num;
 					stocksInSector[name].push(symbol);
 				}
